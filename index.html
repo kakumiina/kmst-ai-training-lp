@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生成AI導入研修 | 株式会社KMST - 中小企業のDX推進を支援</title>
+  <meta name="description" content="最新AI（ChatGPT o3・Claude・Gemini）を実務で活用できる研修。導入20社、満足度95%。助成金申請サポート無償。まずは無料相談から。">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E31B23',
+            primaryDark: '#B8151B',
+            accent: '#FF6B35',
+            accentGreen: '#28A745',
+            dark: '#1A1A1A',
+            gold: '#D4AF37',
+            goldDark: '#B8860B',
+          },
+          fontFamily: {
+            sans: ['Noto Sans JP', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .gradient-primary { background: linear-gradient(135deg, #E31B23 0%, #B8151B 100%); }
+    .gradient-dark { background: linear-gradient(180deg, #1A1A1A 0%, #2D2D2D 100%); }
+    .badge-gold { background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%); }
+    .cta-pulse { animation: pulse 2s infinite; }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #E31B23;
+      margin: 16px auto 0;
+    }
+    .check-list li::before {
+      content: '✓';
+      color: #28A745;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body class="font-sans text-dark bg-white">
+
+  <!-- ヘッダー -->
+  <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-primary rounded flex items-center justify-center">
+          <span class="text-white font-bold text-lg">K</span>
+        </div>
+        <span class="font-bold text-xl tracking-wide">KMST</span>
+      </div>
+      <a href="#contact" class="hidden md:inline-block bg-accent hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition">
+        無料相談はこちら
+      </a>
+    </div>
+  </header>
+
+  <!-- ファーストビュー -->
+  <section class="gradient-primary min-h-screen flex items-center pt-20 pb-12 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 left-10 w-32 h-32 border-4 border-white rounded-full"></div>
+      <div class="absolute bottom-20 right-10 w-48 h-48 border-4 border-white rounded-full"></div>
+      <div class="absolute top-1/2 right-1/4 w-24 h-24 border-4 border-white rotate-45"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 relative z-10">
+      <div class="text-center text-white">
+        <!-- 実績バッジ -->
+        <div class="flex flex-wrap justify-center gap-3 mb-8">
+          <span class="badge-gold text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg">
+            導入実績 20社突破
+          </span>
+          <span class="badge-gold text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg">
+            受講者満足度 95%
+          </span>
+          <span class="badge-gold text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg">
+            継続率 90%
+          </span>
+        </div>
+
+        <!-- メインコピー -->
+        <p class="text-lg md:text-xl mb-4 opacity-90">DX化に本腰を入れたい中小企業様へ</p>
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
+          「AI、使いこなせていますか？」<br>
+          <span class="text-yellow-300">最新AIを実務で活用できる</span><br>
+          生成AI導入研修
+        </h1>
+        <p class="text-lg md:text-2xl mb-8 opacity-90">
+          ChatGPT o3・Claude 3.7・Gemini 2.5を<br class="md:hidden">
+          比較体験しながら、<br>
+          <span class="font-bold">明日から使える</span>スキルを習得
+        </p>
+
+        <!-- CTA -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <a href="#contact" class="cta-pulse bg-accent hover:bg-orange-600 text-white text-xl font-bold py-5 px-10 rounded-full shadow-2xl transition inline-flex items-center justify-center gap-2">
+            <span>まずは無料で相談する</span>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <p class="text-sm opacity-80">
+          ※ 助成金で最大75%オフも可能 ｜ 申請サポート無償
+        </p>
+
+        <!-- AI ロゴ -->
+        <div class="mt-12 flex flex-wrap justify-center items-center gap-6 opacity-90">
+          <span class="text-sm">活用AI:</span>
+          <div class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg">ChatGPT o3</div>
+          <div class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg">Claude 3.7</div>
+          <div class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg">Gemini 2.5</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お悩み共感セクション -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl md:text-4xl font-bold text-center mb-4">
+        こんな<span class="text-primary">お悩み</span>ありませんか？
+      </h2>
+      <p class="text-center text-gray-600 mb-12">多くの中小企業様が同じ課題を抱えています</p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-primary hover-lift">
+          <p class="text-lg"><span class="text-primary font-bold text-2xl mr-2">×</span>ChatGPTを契約したが、<span class="font-bold">社員が使いこなせていない</span></p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-primary hover-lift">
+          <p class="text-lg"><span class="text-primary font-bold text-2xl mr-2">×</span>AIで<span class="font-bold">何ができるのか分からない</span>まま時間だけが過ぎている</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-primary hover-lift">
+          <p class="text-lg"><span class="text-primary font-bold text-2xl mr-2">×</span>競合他社がAI活用を進めていて<span class="font-bold">焦りを感じている</span></p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-primary hover-lift">
+          <p class="text-lg"><span class="text-primary font-bold text-2xl mr-2">×</span>研修を検討したいが、<span class="font-bold">費用対効果が心配</span>で踏み出せない</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-primary hover-lift">
+          <p class="text-lg"><span class="text-primary font-bold text-2xl mr-2">×</span>一般的な研修では<span class="font-bold">自社業務に落とし込めない</span></p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-primary hover-lift">
+          <p class="text-lg"><span class="text-primary font-bold text-2xl mr-2">×</span>AIのリスク（著作権・情報漏洩）が<span class="font-bold">よく分からず不安</span></p>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 border-2 border-primary rounded-2xl p-8 text-center">
+        <p class="text-xl md:text-2xl font-bold text-primary mb-2">
+          その悩み、KMSTの生成AI研修で解決できます
+        </p>
+        <p class="text-gray-600">「知る」「使う」「創る」の3ステップで、確実にAI活用人材を育成</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 選ばれる3つの理由 -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-4xl font-bold text-center section-title mb-16">
+        KMSTが<span class="text-primary">選ばれる3つの理由</span>
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- 理由1 -->
+        <div class="bg-gray-50 rounded-2xl p-8 text-center hover-lift">
+          <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-white text-3xl font-black">1</span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">最新AIモデルを<br>網羅的に比較体験</h3>
+          <p class="text-gray-600 mb-4">
+            o3・Claude 3.7・Gemini 2.5を同一条件で比較。どのAIが自社に最適か、実際に触って判断できます。
+          </p>
+          <div class="flex flex-wrap justify-center gap-2">
+            <span class="bg-dark text-white text-xs px-3 py-1 rounded-full">ChatGPT o3</span>
+            <span class="bg-dark text-white text-xs px-3 py-1 rounded-full">Claude 3.7</span>
+            <span class="bg-dark text-white text-xs px-3 py-1 rounded-full">Gemini 2.5</span>
+          </div>
+        </div>
+
+        <!-- 理由2 -->
+        <div class="bg-gray-50 rounded-2xl p-8 text-center hover-lift">
+          <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-white text-3xl font-black">2</span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">貴社業務に<br>カスタマイズ可能</h3>
+          <p class="text-gray-600 mb-4">
+            営業・管理・人事・情報システムなど、実際の業務課題に合わせて研修内容をカスタム。「使える」研修を提供します。
+          </p>
+          <ul class="text-sm text-left text-gray-600 check-list">
+            <li>業種別ケーススタディ</li>
+            <li>自社資料を使った実習</li>
+            <li>実務に即したプロンプト集</li>
+          </ul>
+        </div>
+
+        <!-- 理由3 -->
+        <div class="bg-gray-50 rounded-2xl p-8 text-center hover-lift">
+          <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-white text-3xl font-black">3</span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">助成金申請を<br>無償でサポート</h3>
+          <p class="text-gray-600 mb-4">
+            人材開発支援助成金で<span class="font-bold text-primary">最大75%オフ</span>。面倒な申請手続きも提携社労士と連携してサポートします。
+          </p>
+          <div class="bg-yellow-50 border border-yellow-400 rounded-lg p-3">
+            <p class="text-sm font-bold text-yellow-800">
+              例）55万円 → 実質13.75万円に
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 中間CTA -->
+  <section class="py-12 gradient-primary">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-white text-lg mb-6">
+        まずはお気軽にご相談ください。貴社に最適なプランをご提案します。
+      </p>
+      <a href="#contact" class="cta-pulse inline-flex items-center gap-2 bg-accent hover:bg-orange-600 text-white text-xl font-bold py-5 px-10 rounded-full shadow-2xl transition">
+        <span>無料相談を申し込む</span>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- 研修内容 -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-4xl font-bold text-center section-title mb-6">
+        研修内容・カリキュラム
+      </h2>
+      <p class="text-center text-gray-600 mb-12">「知る」「使う」「創る」の3ステップで確実に習得</p>
+
+      <!-- Step1 -->
+      <div class="mb-8">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="gradient-dark text-white p-6 flex items-center gap-4">
+            <span class="bg-white text-dark font-black text-xl w-12 h-12 rounded-full flex items-center justify-center">1</span>
+            <div>
+              <p class="text-sm opacity-80">STEP 1 ｜ 知る</p>
+              <h3 class="text-xl font-bold">生成AIリテラシー基礎＋AI倫理</h3>
+            </div>
+            <span class="ml-auto bg-primary px-4 py-1 rounded-full text-sm">2時間</span>
+          </div>
+          <div class="p-6">
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="bg-gray-50 rounded-lg p-4">
+                <p class="font-bold text-primary mb-2">基礎理解</p>
+                <p class="text-sm text-gray-600">o3/Claude 3.7/Gemini 2.5の違い・仕組みを理解</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <p class="font-bold text-primary mb-2">リスク・法務</p>
+                <p class="text-sm text-gray-600">ハルシネーション、著作権、個人情報保護を学習</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <p class="font-bold text-primary mb-2">デモ体験</p>
+                <p class="text-sm text-gray-600">同一プロンプトで3モデルを比較体験</p>
+              </div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs bg-green-100 text-green-800 px-3 py-1 rounded-full">成果物：用語集PDF</span>
+              <span class="text-xs bg-green-100 text-green-800 px-3 py-1 rounded-full">成果物：倫理チェックリスト</span>
+              <span class="text-xs bg-blue-100 text-blue-800 px-3 py-1 rounded-full">KPI：事後テスト正答率+40%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step2 -->
+      <div class="mb-8">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="gradient-dark text-white p-6 flex items-center gap-4">
+            <span class="bg-white text-dark font-black text-xl w-12 h-12 rounded-full flex items-center justify-center">2</span>
+            <div>
+              <p class="text-sm opacity-80">STEP 2 ｜ 使う</p>
+              <h3 class="text-xl font-bold">生成AI業務活用実践</h3>
+            </div>
+            <span class="ml-auto bg-primary px-4 py-1 rounded-full text-sm">5時間</span>
+          </div>
+          <div class="p-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="bg-gray-50 rounded-lg p-4">
+                <p class="font-bold text-primary mb-2">プロンプト応用</p>
+                <p class="text-sm text-gray-600">Role/Few-shot/Chain-of-Thought</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <p class="font-bold text-primary mb-2">モデル比較</p>
+                <p class="text-sm text-gray-600">精度・速度・コスト・プラグイン</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <p class="font-bold text-primary mb-2">ノーコード自動化</p>
+                <p class="text-sm text-gray-600">Zapier/Makeで業務自動化</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <p class="font-bold text-primary mb-2">ケース演習</p>
+                <p class="text-sm text-gray-600">営業・管理・人事で実践</p>
+              </div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs bg-green-100 text-green-800 px-3 py-1 rounded-full">成果物：プロンプト集</span>
+              <span class="text-xs bg-green-100 text-green-800 px-3 py-1 rounded-full">成果物：Zapierフロー</span>
+              <span class="text-xs bg-blue-100 text-blue-800 px-3 py-1 rounded-full">KPI：時短目標を数値化</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step3 -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Step3-A -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="gradient-dark text-white p-6">
+            <div class="flex items-center gap-4 mb-2">
+              <span class="bg-white text-dark font-black text-lg w-10 h-10 rounded-full flex items-center justify-center">3A</span>
+              <span class="bg-primary px-4 py-1 rounded-full text-sm">5時間</span>
+            </div>
+            <p class="text-sm opacity-80">STEP 3-A ｜ 創る</p>
+            <h3 class="text-lg font-bold">ノーコード・ミニアプリ開発編</h3>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-2 text-sm text-gray-600 mb-4">
+              <li class="flex items-start gap-2"><span class="text-primary">●</span>DX要件定義シートの作成</li>
+              <li class="flex items-start gap-2"><span class="text-primary">●</span>RAGの活用（入門編）</li>
+              <li class="flex items-start gap-2"><span class="text-primary">●</span>FAQボット作成（Bubble + o3 API）</li>
+              <li class="flex items-start gap-2"><span class="text-primary">●</span>スプリント開発演習</li>
+            </ul>
+            <span class="text-xs bg-blue-100 text-blue-800 px-3 py-1 rounded-full">KPI：PoC完成率90%</span>
+          </div>
+        </div>
+
+        <!-- Step3-B -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="gradient-dark text-white p-6">
+            <div class="flex items-center gap-4 mb-2">
+              <span class="bg-white text-dark font-black text-lg w-10 h-10 rounded-full flex items-center justify-center">3B</span>
+              <span class="bg-primary px-4 py-1 rounded-full text-sm">5時間</span>
+            </div>
+            <p class="text-sm opacity-80">STEP 3-B ｜ 創る</p>
+            <h3 class="text-lg font-bold">クリエイティブ活用編</h3>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-2 text-sm text-gray-600 mb-4">
+              <li class="flex items-start gap-2"><span class="text-primary">●</span>画像生成AI比較（Midjourney/SDXL/Firefly）</li>
+              <li class="flex items-start gap-2"><span class="text-primary">●</span>プロンプトレシピ作成</li>
+              <li class="flex items-start gap-2"><span class="text-primary">●</span>デザイン実習（パース/商品画像/バナー）</li>
+              <li class="flex items-start gap-2"><span class="text-primary">●</span>二次加工（Canva/Photoshop）</li>
+            </ul>
+            <span class="text-xs bg-blue-100 text-blue-800 px-3 py-1 rounded-full">KPI：納品品質画像率90%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 料金プラン -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-4xl font-bold text-center section-title mb-6">
+        料金プラン
+      </h2>
+      <p class="text-center text-gray-600 mb-12">ニーズに合わせて選べる柔軟なプラン構成</p>
+
+      <!-- 単体料金 -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+        <div class="bg-gray-50 rounded-xl p-6 text-center hover-lift">
+          <span class="inline-block bg-dark text-white text-xs px-3 py-1 rounded-full mb-3">STEP 1</span>
+          <h3 class="font-bold mb-2">生成AIリテラシー<br>基礎＋AI倫理</h3>
+          <p class="text-sm text-gray-500 mb-3">2時間 ｜ 〜10名</p>
+          <p class="text-3xl font-black text-primary">5<span class="text-lg">万円</span></p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6 text-center hover-lift">
+          <span class="inline-block bg-dark text-white text-xs px-3 py-1 rounded-full mb-3">STEP 2</span>
+          <h3 class="font-bold mb-2">生成AI<br>業務活用実践</h3>
+          <p class="text-sm text-gray-500 mb-3">5時間 ｜ 〜10名</p>
+          <p class="text-3xl font-black text-primary">12<span class="text-lg">万円</span></p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6 text-center hover-lift">
+          <span class="inline-block bg-dark text-white text-xs px-3 py-1 rounded-full mb-3">STEP 3-A</span>
+          <h3 class="font-bold mb-2">ノーコード<br>ミニアプリ開発編</h3>
+          <p class="text-sm text-gray-500 mb-3">5時間 ｜ 〜10名</p>
+          <p class="text-3xl font-black text-primary">20<span class="text-lg">万円</span></p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6 text-center hover-lift">
+          <span class="inline-block bg-dark text-white text-xs px-3 py-1 rounded-full mb-3">STEP 3-B</span>
+          <h3 class="font-bold mb-2">クリエイティブ<br>活用編</h3>
+          <p class="text-sm text-gray-500 mb-3">5時間 ｜ 〜10名</p>
+          <p class="text-3xl font-black text-primary">20<span class="text-lg">万円</span></p>
+        </div>
+      </div>
+
+      <!-- パッケージ料金 -->
+      <h3 class="text-xl font-bold text-center mb-6">お得なパッケージプラン</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white border-2 border-gray-200 rounded-2xl p-6 hover-lift">
+          <p class="text-sm text-gray-500 mb-2">STEP 1 + 2</p>
+          <h4 class="font-bold text-lg mb-3">基礎＋実践パッケージ</h4>
+          <p class="text-gray-400 line-through text-sm">通常 17万円</p>
+          <p class="text-3xl font-black text-primary mb-2">15<span class="text-lg">万円</span><span class="text-sm text-gray-500 font-normal ml-2">(税別)</span></p>
+          <span class="inline-block bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full">2万円OFF</span>
+        </div>
+        <div class="bg-primary text-white rounded-2xl p-6 hover-lift relative">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-dark text-xs font-bold px-4 py-1 rounded-full">人気No.1</span>
+          <p class="text-sm opacity-80 mb-2">STEP 1 + 2 + 3A or 3B</p>
+          <h4 class="font-bold text-lg mb-3">基礎＋実践＋応用<br>パッケージ</h4>
+          <p class="opacity-60 line-through text-sm">通常 37万円</p>
+          <p class="text-3xl font-black mb-2">35<span class="text-lg">万円</span><span class="text-sm font-normal ml-2 opacity-80">(税別)</span></p>
+          <span class="inline-block bg-yellow-400 text-dark text-xs font-bold px-3 py-1 rounded-full">2万円OFF</span>
+        </div>
+        <div class="bg-white border-2 border-gray-200 rounded-2xl p-6 hover-lift">
+          <p class="text-sm text-gray-500 mb-2">STEP 1 + 2 + 3A + 3B</p>
+          <h4 class="font-bold text-lg mb-3">フルパッケージ</h4>
+          <p class="text-gray-400 line-through text-sm">通常 57万円</p>
+          <p class="text-3xl font-black text-primary mb-2">55<span class="text-lg">万円</span><span class="text-sm text-gray-500 font-normal ml-2">(税別)</span></p>
+          <span class="inline-block bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full">2万円OFF</span>
+        </div>
+      </div>
+
+      <p class="text-center text-sm text-gray-500 mt-6">
+        ※追加受講者：¥5,000/人 ｜ e-Learning補講：¥2,000/人
+      </p>
+    </div>
+  </section>
+
+  <!-- 助成金セクション -->
+  <section class="py-16 bg-yellow-50 border-y-4 border-yellow-400">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <span class="inline-block bg-yellow-400 text-dark font-bold px-4 py-2 rounded-full mb-4">助成金で最大75%オフ</span>
+        <h2 class="text-2xl md:text-3xl font-bold">
+          人材開発支援助成金<br class="md:hidden">「事業展開等リスキリング支援コース」対応
+        </h2>
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-xl font-bold mb-4">中小企業なら経費の75%が助成</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 text-xl">✓</span>
+                <span>経費助成率：<span class="font-bold text-primary">75%</span>（中小企業）</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 text-xl">✓</span>
+                <span>賃金助成：1時間あたり<span class="font-bold text-primary">1,000円</span></span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 text-xl">✓</span>
+                <span>1事業所あたり年間<span class="font-bold text-primary">1億円</span>まで</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-primary/5 rounded-xl p-6">
+            <p class="text-sm text-gray-600 mb-2">例）フルパッケージ 55万円の場合</p>
+            <div class="flex items-end gap-2 mb-2">
+              <span class="text-4xl font-black text-primary">13.75</span>
+              <span class="text-xl font-bold text-primary">万円</span>
+              <span class="text-gray-500">で受講可能</span>
+            </div>
+            <p class="text-sm text-gray-500">（助成金41.25万円適用時）</p>
+          </div>
+        </div>
+        <div class="mt-6 pt-6 border-t border-gray-200 text-center">
+          <p class="text-gray-600">
+            <span class="font-bold">申請サポートは無償</span>で提供。提携社労士と連携して手続きを代行します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お客様の声 -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-4xl font-bold text-center section-title mb-6">
+        お客様の声
+      </h2>
+      <p class="text-center text-gray-600 mb-12">研修を導入いただいた企業様からの声をご紹介</p>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- 声1 -->
+        <div class="bg-gray-50 rounded-2xl p-6 hover-lift">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center text-2xl">👤</div>
+            <div>
+              <p class="font-bold">製造業 A社</p>
+              <p class="text-sm text-gray-500">代表取締役</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <span class="text-yellow-400 text-lg">★★★★★</span>
+          </div>
+          <p class="text-gray-700 mb-4">
+            「<span class="font-bold">社員がAIを怖がらなくなった</span>のが一番の成果です。研修後、営業部で議事録作成の時間が<span class="text-primary font-bold">月20時間削減</span>できました。」
+          </p>
+          <p class="text-sm text-gray-500">受講コース：基礎＋実践パッケージ</p>
+        </div>
+
+        <!-- 声2 -->
+        <div class="bg-gray-50 rounded-2xl p-6 hover-lift">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center text-2xl">👤</div>
+            <div>
+              <p class="font-bold">小売業 B社</p>
+              <p class="text-sm text-gray-500">経営企画部長</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <span class="text-yellow-400 text-lg">★★★★★</span>
+          </div>
+          <p class="text-gray-700 mb-4">
+            「他社の研修は一般論ばかりでしたが、KMSTさんは<span class="font-bold">うちの業務に合わせてカスタマイズ</span>してくれました。助成金申請も全部やってもらえて助かりました。」
+          </p>
+          <p class="text-sm text-gray-500">受講コース：フルパッケージ</p>
+        </div>
+
+        <!-- 声3 -->
+        <div class="bg-gray-50 rounded-2xl p-6 hover-lift">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center text-2xl">👤</div>
+            <div>
+              <p class="font-bold">IT企業 C社</p>
+              <p class="text-sm text-gray-500">人事部マネージャー</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <span class="text-yellow-400 text-lg">★★★★★</span>
+          </div>
+          <p class="text-gray-700 mb-4">
+            「研修中に実際に<span class="font-bold">FAQボットを完成</span>させられたのは驚きでした。ノーコードでここまでできるとは。今では社内問い合わせの<span class="text-primary font-bold">40%をボットが対応</span>しています。」
+          </p>
+          <p class="text-sm text-gray-500">受講コース：基礎＋実践＋応用パッケージ</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 他社比較 -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">
+        他社との違い
+      </h2>
+
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-xl shadow-lg overflow-hidden">
+          <thead>
+            <tr class="bg-dark text-white">
+              <th class="p-4 text-left"></th>
+              <th class="p-4 text-center bg-primary">
+                <span class="font-bold">KMST</span>
+              </th>
+              <th class="p-4 text-center">一般的な<br>研修会社</th>
+              <th class="p-4 text-center">AI開発会社</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr>
+              <td class="p-4 font-bold">柔軟性</td>
+              <td class="p-4 text-center bg-primary/5"><span class="text-primary font-bold">◎</span><br><span class="text-sm">業種・課題に応じてカスタム可</span></td>
+              <td class="p-4 text-center"><span class="text-gray-400">△</span><br><span class="text-sm text-gray-500">決まったカリキュラムのみ</span></td>
+              <td class="p-4 text-center"><span class="text-gray-400">○</span><br><span class="text-sm text-gray-500">自社都合で画一的</span></td>
+            </tr>
+            <tr>
+              <td class="p-4 font-bold">コスト</td>
+              <td class="p-4 text-center bg-primary/5"><span class="text-primary font-bold">◎</span><br><span class="text-sm">非常にリーズナブル</span></td>
+              <td class="p-4 text-center"><span class="text-gray-400">△</span><br><span class="text-sm text-gray-500">比較的高め</span></td>
+              <td class="p-4 text-center"><span class="text-gray-400">×</span><br><span class="text-sm text-gray-500">高額</span></td>
+            </tr>
+            <tr>
+              <td class="p-4 font-bold">フォロー体制</td>
+              <td class="p-4 text-center bg-primary/5"><span class="text-primary font-bold">◎</span><br><span class="text-sm">実務に落とし込む支援まで対応</span></td>
+              <td class="p-4 text-center"><span class="text-gray-400">△</span><br><span class="text-sm text-gray-500">研修の支援は限定的</span></td>
+              <td class="p-4 text-center"><span class="text-gray-400">△</span><br><span class="text-sm text-gray-500">実務活用はフォロー外</span></td>
+            </tr>
+            <tr>
+              <td class="p-4 font-bold">講師の専門性</td>
+              <td class="p-4 text-center bg-primary/5"><span class="text-primary font-bold">◎</span><br><span class="text-sm">実務に強く課題解決に長ける</span></td>
+              <td class="p-4 text-center"><span class="text-gray-400">○</span><br><span class="text-sm text-gray-500">専門知識は豊富だが実務はやや弱い</span></td>
+              <td class="p-4 text-center"><span class="text-gray-400">○</span><br><span class="text-sm text-gray-500">専門知識は豊富だが実務はやや弱い</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 導入の流れ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl md:text-4xl font-bold text-center section-title mb-12">
+        導入の流れ
+      </h2>
+
+      <div class="flex flex-col md:flex-row justify-between items-start gap-4">
+        <div class="flex-1 text-center">
+          <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+          <h3 class="font-bold mb-2">NDA締結</h3>
+          <p class="text-sm text-gray-600">秘密保持契約を締結</p>
+        </div>
+        <div class="hidden md:block text-4xl text-gray-300 self-center">→</div>
+        <div class="flex-1 text-center">
+          <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+          <h3 class="font-bold mb-2">ヒアリング</h3>
+          <p class="text-sm text-gray-600">課題・ニーズを詳しく伺います</p>
+        </div>
+        <div class="hidden md:block text-4xl text-gray-300 self-center">→</div>
+        <div class="flex-1 text-center">
+          <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+          <h3 class="font-bold mb-2">ご提案</h3>
+          <p class="text-sm text-gray-600">最適なプランをご提案</p>
+        </div>
+        <div class="hidden md:block text-4xl text-gray-300 self-center">→</div>
+        <div class="flex-1 text-center">
+          <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+          <h3 class="font-bold mb-2">ご契約</h3>
+          <p class="text-sm text-gray-600">契約締結・助成金申請サポート</p>
+        </div>
+        <div class="hidden md:block text-4xl text-gray-300 self-center">→</div>
+        <div class="flex-1 text-center">
+          <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">5</div>
+          <h3 class="font-bold mb-2">研修実施</h3>
+          <p class="text-sm text-gray-600">日程調整後、研修スタート</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl md:text-4xl font-bold text-center section-title mb-12">
+        よくある質問
+      </h2>
+
+      <div class="space-y-4">
+        <details class="bg-white rounded-xl shadow-md overflow-hidden group">
+          <summary class="p-6 cursor-pointer flex justify-between items-center font-bold hover:bg-gray-50">
+            <span>Q. 助成金の対象になりますか？</span>
+            <span class="text-primary text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600">
+            <p>はい、対象になることが多いです。多くの企業様が「人材開発支援助成金（事業展開等リスキリング支援コース）」を活用しています。業種・企業規模を問わず、従業員のスキル向上を目的とした研修であれば申請可能です。</p>
+          </div>
+        </details>
+
+        <details class="bg-white rounded-xl shadow-md overflow-hidden group">
+          <summary class="p-6 cursor-pointer flex justify-between items-center font-bold hover:bg-gray-50">
+            <span>Q. 助成金の申請は自社で対応しないといけませんか？</span>
+            <span class="text-primary text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600">
+            <p>いいえ、提携する社労士と連携して申請サポートを<span class="font-bold">無償</span>で提供いたします。「興味はあるが手続きが面倒そう…」という企業様でも、手離れよく制度活用できる仕組みをご用意しています。</p>
+          </div>
+        </details>
+
+        <details class="bg-white rounded-xl shadow-md overflow-hidden group">
+          <summary class="p-6 cursor-pointer flex justify-between items-center font-bold hover:bg-gray-50">
+            <span>Q. 費用対効果があるかどうかが心配です…</span>
+            <span class="text-primary text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600">
+            <p>ご安心ください。事前ヒアリングをもとにレベル別・職種別にカリキュラムを設計します。対象ごとの理解度や活用イメージに合わせて、「汎用的すぎない実践的な内容」にすることが可能です。受講前後のテストやROIダッシュボードで効果測定も行います。</p>
+          </div>
+        </details>
+
+        <details class="bg-white rounded-xl shadow-md overflow-hidden group">
+          <summary class="p-6 cursor-pointer flex justify-between items-center font-bold hover:bg-gray-50">
+            <span>Q. 自社に合わせて柔軟な対応はしてもらえますか？</span>
+            <span class="text-primary text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600">
+            <p>はい、もちろんです。単なる説明ではなく、「貴社の業務活用まで落とし込む」のが当社の特徴です。研修では実際の社内資料や業務例をもとに、「何に・どう使うと生産性が上がるか」までを明示します。</p>
+          </div>
+        </details>
+
+        <details class="bg-white rounded-xl shadow-md overflow-hidden group">
+          <summary class="p-6 cursor-pointer flex justify-between items-center font-bold hover:bg-gray-50">
+            <span>Q. オンラインでの研修は可能ですか？</span>
+            <span class="text-primary text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600">
+            <p>はい、対面・オンラインどちらでも対応可能です。オンラインの場合はZoomやTeamsを使用し、画面共有しながらリアルタイムで実習を行います。全国どこからでもご受講いただけます。</p>
+          </div>
+        </details>
+
+        <details class="bg-white rounded-xl shadow-md overflow-hidden group">
+          <summary class="p-6 cursor-pointer flex justify-between items-center font-bold hover:bg-gray-50">
+            <span>Q. AI初心者でも大丈夫ですか？</span>
+            <span class="text-primary text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600">
+            <p>はい、全く問題ありません。STEP1の「生成AIリテラシー基礎」では、AIとは何か？という基本から丁寧に解説します。「ChatGPTを触ったことがない」という方でも安心してご参加いただけます。</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最終CTA -->
+  <section id="contact" class="py-20 gradient-primary relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-40 h-40 border-4 border-white rounded-full"></div>
+      <div class="absolute bottom-10 right-10 w-60 h-60 border-4 border-white rounded-full"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+      <h2 class="text-2xl md:text-4xl font-bold text-white mb-6">
+        まずは無料相談から<br>お気軽にご連絡ください
+      </h2>
+      <p class="text-white/90 text-lg mb-8">
+        貴社の課題をヒアリングし、最適な研修プランをご提案します。<br>
+        助成金の活用についてもご説明いたします。
+      </p>
+
+      <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl max-w-2xl mx-auto">
+        <h3 class="text-xl font-bold mb-6">無料相談お申し込み</h3>
+        <form action="#" method="POST" class="space-y-4 text-left">
+          <div>
+            <label class="block text-sm font-bold mb-1">会社名 <span class="text-red-500">*</span></label>
+            <input type="text" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="株式会社〇〇">
+          </div>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-bold mb-1">お名前 <span class="text-red-500">*</span></label>
+              <input type="text" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="山田 太郎">
+            </div>
+            <div>
+              <label class="block text-sm font-bold mb-1">役職</label>
+              <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="代表取締役">
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-bold mb-1">メールアドレス <span class="text-red-500">*</span></label>
+              <input type="email" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="example@company.co.jp">
+            </div>
+            <div>
+              <label class="block text-sm font-bold mb-1">電話番号</label>
+              <input type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="03-1234-5678">
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-bold mb-1">ご興味のあるプラン</label>
+            <select class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary">
+              <option value="">選択してください</option>
+              <option value="basic">基礎＋実践パッケージ（15万円）</option>
+              <option value="standard">基礎＋実践＋応用パッケージ（35万円）</option>
+              <option value="full">フルパッケージ（55万円）</option>
+              <option value="custom">その他・カスタム相談</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-bold mb-1">ご相談内容</label>
+            <textarea rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="現在の課題やご要望をお聞かせください"></textarea>
+          </div>
+          <button type="submit" class="w-full cta-pulse bg-accent hover:bg-orange-600 text-white text-xl font-bold py-5 rounded-full shadow-lg transition flex items-center justify-center gap-2">
+            <span>無料相談を申し込む</span>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+        <p class="text-sm text-gray-500 mt-4 text-center">
+          ※ 通常1営業日以内にご連絡いたします
+        </p>
+      </div>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-6 text-white/80">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+          <span>info@kmst.co.jp</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 会社概要 -->
+  <section class="py-16 bg-dark text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-xl font-bold mb-8 text-center">会社概要</h2>
+      <div class="grid md:grid-cols-2 gap-6 text-sm">
+        <div class="space-y-3">
+          <div class="flex">
+            <span class="w-24 text-gray-400">会社名</span>
+            <span>株式会社KMST</span>
+          </div>
+          <div class="flex">
+            <span class="w-24 text-gray-400">代表者名</span>
+            <span>鎌倉 匠汰</span>
+          </div>
+          <div class="flex">
+            <span class="w-24 text-gray-400">設立</span>
+            <span>2023年04月</span>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="flex">
+            <span class="w-24 text-gray-400">資本金</span>
+            <span>1,000,000円</span>
+          </div>
+          <div class="flex">
+            <span class="w-24 text-gray-400">所在地</span>
+            <span>〒767-0013 香川県三豊市高瀬町下麻1258-1</span>
+          </div>
+        </div>
+      </div>
+      <div class="mt-6 pt-6 border-t border-gray-700">
+        <p class="text-gray-400 text-sm">事業内容</p>
+        <p class="text-sm mt-2">動画マーケティング支援事業 ／ 中小企業向けDX支援事業 ／ 教育・研修事業 ／ 公的支援策申請支援事業</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="bg-black text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <div class="flex items-center justify-center gap-2 mb-4">
+        <div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+          <span class="text-white font-bold">K</span>
+        </div>
+        <span class="font-bold text-lg">KMST</span>
+      </div>
+      <p class="text-gray-400 text-sm">
+        Copyright © 2025 KMST inc. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- 固定CTA（スマホ） -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 md:hidden z-50">
+    <a href="#contact" class="block bg-accent hover:bg-orange-600 text-white text-center font-bold py-4 rounded-full shadow-lg">
+      無料相談を申し込む
+    </a>
+  </div>
+
+</body>
+</html>
