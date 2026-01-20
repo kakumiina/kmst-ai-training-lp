@@ -928,31 +928,75 @@
         導入の流れ
       </h2>
 
-      <div class="flex flex-col md:flex-row justify-between items-start gap-4">
+      <!-- モバイル用（縦並び） -->
+      <div class="md:hidden space-y-4">
+        <div class="flex items-center gap-4 bg-gray-50 rounded-xl p-4">
+          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">1</div>
+          <div>
+            <h3 class="font-bold">NDA締結</h3>
+            <p class="text-sm text-gray-600">秘密保持契約を締結</p>
+          </div>
+        </div>
+        <div class="text-center text-2xl text-gray-300">↓</div>
+        <div class="flex items-center gap-4 bg-gray-50 rounded-xl p-4">
+          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">2</div>
+          <div>
+            <h3 class="font-bold">ヒアリング</h3>
+            <p class="text-sm text-gray-600">課題・ニーズを詳しく伺います</p>
+          </div>
+        </div>
+        <div class="text-center text-2xl text-gray-300">↓</div>
+        <div class="flex items-center gap-4 bg-gray-50 rounded-xl p-4">
+          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">3</div>
+          <div>
+            <h3 class="font-bold">ご提案</h3>
+            <p class="text-sm text-gray-600">最適なプランをご提案</p>
+          </div>
+        </div>
+        <div class="text-center text-2xl text-gray-300">↓</div>
+        <div class="flex items-center gap-4 bg-gray-50 rounded-xl p-4">
+          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">4</div>
+          <div>
+            <h3 class="font-bold">ご契約</h3>
+            <p class="text-sm text-gray-600">契約締結・助成金申請サポート</p>
+          </div>
+        </div>
+        <div class="text-center text-2xl text-gray-300">↓</div>
+        <div class="flex items-center gap-4 bg-gray-50 rounded-xl p-4">
+          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">5</div>
+          <div>
+            <h3 class="font-bold">研修実施</h3>
+            <p class="text-sm text-gray-600">日程調整後、研修スタート</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PC用（横並び） -->
+      <div class="hidden md:flex justify-between items-start gap-4">
         <div class="flex-1 text-center">
           <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
           <h3 class="font-bold mb-2">NDA締結</h3>
           <p class="text-sm text-gray-600">秘密保持契約を締結</p>
         </div>
-        <div class="hidden md:block text-4xl text-gray-300 self-center">→</div>
+        <div class="text-4xl text-gray-300 self-center">→</div>
         <div class="flex-1 text-center">
           <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
           <h3 class="font-bold mb-2">ヒアリング</h3>
           <p class="text-sm text-gray-600">課題・ニーズを詳しく伺います</p>
         </div>
-        <div class="hidden md:block text-4xl text-gray-300 self-center">→</div>
+        <div class="text-4xl text-gray-300 self-center">→</div>
         <div class="flex-1 text-center">
           <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
           <h3 class="font-bold mb-2">ご提案</h3>
           <p class="text-sm text-gray-600">最適なプランをご提案</p>
         </div>
-        <div class="hidden md:block text-4xl text-gray-300 self-center">→</div>
+        <div class="text-4xl text-gray-300 self-center">→</div>
         <div class="flex-1 text-center">
           <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
           <h3 class="font-bold mb-2">ご契約</h3>
           <p class="text-sm text-gray-600">契約締結・助成金申請サポート</p>
         </div>
-        <div class="hidden md:block text-4xl text-gray-300 self-center">→</div>
+        <div class="text-4xl text-gray-300 self-center">→</div>
         <div class="flex-1 text-center">
           <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">5</div>
           <h3 class="font-bold mb-2">研修実施</h3>
